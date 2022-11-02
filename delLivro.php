@@ -20,7 +20,7 @@
 
         $sql = "DELETE FROM `tb_livro` WHERE cod_liv = " . $_GET["cod_liv"];
 
-        // Executar
+        // Executar - Trocado pra forma procedural
 
         $resp = $POO->query($sql);
 
