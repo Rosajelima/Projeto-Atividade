@@ -34,13 +34,13 @@
 
                 $sql = " SELECT * FROM TB_LIVRO WHERE COD_LIV = " . $_GET["cod_liv"];
 
-                // Executar 
+                // Executar - Trocado para forma procedural
 
                 $resp = $POO->query($sql);
 
                 // Exibir (Array)
 
-                $campo = mysqli_fetch_array($resp); // Índice, Associativo
+                $$campo = mysqli_fetch_array($resp); // Índice, Associativo
 
             ?>
 
@@ -72,11 +72,9 @@
 
                                 $sql = " SELECT * FROM tb_editora";
 
-                                // Executar
+                                // Executar - Trocado para forma procedural
 
                                 $resp = $POO->query($sql);
-
-                                // Exibir
 
                             ?>
 
@@ -84,6 +82,8 @@
 
                                 <option>Selecione ...</option>
                                 <?php
+                                
+                                // Trocado para forma procedural
 
                                     while($ed = $resp->fetch_array()){
                                         echo "<option value='" . $ed["cod_ed"] . "'";
