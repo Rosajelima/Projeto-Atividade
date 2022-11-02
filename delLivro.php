@@ -12,22 +12,19 @@
     <body>
         <div class="container">
 
-    <?php 
+        <?php 
 
-        include_once("../servidor.php");
-    
-        // Fazer o código para deletar o produto
+            include_once("../servidor.php");
 
-        $sql = "DELETE FROM `tb_livro` WHERE cod_liv = " . $_GET["cod_liv"];
+            // Fazer o código para deletar o produto
+            $sql = "DELETE FROM `tb_livro` WHERE cod_liv = " . $_GET["cod_liv"];
 
-        // Executar - Trocado pra forma procedural
+            // Executar - Trocado pra forma procedural
+            $resp = $POO->query($sql);
 
-        $resp = $POO->query($sql);
-
-    ?>
+        ?>
     </body>
 
-<script src="../js/jquery-3.5.1.slim.min.js"></script>
-<script src="../js/popper.min.js"></script>
-
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
 </html>
